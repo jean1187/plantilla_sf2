@@ -1,4 +1,4 @@
-Proyecto TALLER AERONAUTICO
+Proyecto PLANTILLA
 ==================
 
 Este repositorio alberga el código fuente del proyecto que se esta desarollando
@@ -6,16 +6,15 @@ Este repositorio alberga el código fuente del proyecto que se esta desarollando
 Sobre la aplicación
 -------------------
 
-Se estima desarrollar una aplicacion que sea capaz de llevar el control del historial de los componentes, ubicacion exacta , 
-bitacora de las areonaves, etc
+Se estima desarrollar una aplicacion que sea capaz de llevar el control del LOGIN Y DE LOS MENUES PARA APLICACIONES VENIDERAS
 
 Instalación y configuración
 ---------------------------
 
 #### Instalación ####
 
-  1. Clona el repositorio `aeropuerto`  && cd aeropuerto`
-  3. Ejecuta el comando  php `bin/vendors install`  para descargar
+  1. Clona el repositorio `plantilla_sf2`  && cd plantilla_sf2`
+  2. Ejecuta el comando  php `bin/vendors install`  para descargar
   o actualizar las librerías externas de ``Symfony2``. Este comando puede tardar
   un buen rato en completarse.
   
@@ -29,9 +28,9 @@ configurarlo en las primeras líneas del archivo `app/config/parameters.ini`:
     database_driver   = pdo_mysql
     database_host     = localhost
     database_port     =
-    database_name     = taller_aeronautico
+    database_name     = plantilla
     database_user     = root
-    database_password = root_mysql.2010
+    database_password = 123
 ```
 
 Una vez configurado el acceso a la base de datos, tienes dos opciones para crear la base de datos,
@@ -41,15 +40,15 @@ Una vez configurado el acceso a la base de datos, tienes dos opciones para crear
 ```
 Ya este paso no es necesario, porque las entidades estan creadas ve la paso ### Con ayuda de Doctrine Doctrine  ###
 
-Restaurar la base de datos con ayuda del SQL que esta en data_base_SQL/taller_aeronautico.sql
+Restaurar la base de datos con ayuda del SQL que esta en data_base_SQL/Empresa_plantillasf2.sql
 
     Si las entidades no estivieran creadas
 
-1. php app/console doctrine:mapping:convert yml ./src/Taller/AeronauticoBundle/Resources/config/doctrine/metadata/orm --from-database --force
+1. php app/console doctrine:mapping:convert yml ./src/Empresa/PlantillaBundle/Resources/config/doctrine/metadata/orm --from-database --force
 
-2. php app/console doctrine:mapping:import AeronauticoBundle annotation
+2. php app/console doctrine:mapping:import PlantillaBundle annotation
 
-3. php app/console doctrine:generate:entities AeronauticoBundle
+3. php app/console doctrine:generate:entities PlantillaBundle
 
 
 ```
@@ -67,7 +66,7 @@ Como ya las entidades estan creadas
     
     `Solamente tengo algunas tablas precargadas` Si quieres modificar puedes ver el archivo
 
-    `/src/Taller/AeronauticoBundle/DataFixtures/ORM/`
+    `/src/Empresa/PlantillaBundle/DataFixtures/ORM/`
 
 ```
 
@@ -79,7 +78,7 @@ tu servidor web local. Añade en primer lugar la siguiente línea en el archivo
 `/etc/hosts`:
 
 ```
-127.0.0.1    w2w.aeronautico
+127.0.0.1    w2w.plantilla_sf2
 
 ```
 
@@ -87,12 +86,12 @@ Después, configura el *host* en el servidor web. Si utilizas por ejemplo
 Apache, debes añadir lo siguiente en su archivo de configuración:
 
 ```
-# Aeronautico 2011
+# plantillasf2 2011
 <VirtualHost *:80>
-  DocumentRoot "/home/jean/Documentos/www/aeropuerto/web"
-  ServerName    w2w.aeropuerto
+  DocumentRoot "/home/jean/Documentos/www/plantilla_sf2/web"
+  ServerName    w2w.plantilla_sf2
   DirectoryIndex app_dev.php
-  <Directory "/home/jean/Documentos/www/aeropuerto/web">
+  <Directory "/home/jean/Documentos/www/plantilla_sf2/web">
     AllowOverride All
     Allow from All
   </Directory>
@@ -105,8 +104,8 @@ Para terminar, no olvides reiniciar el servidor web.
 ### Probando el proyecto ###
 
 Después de la configuración anterior, ya puedes acceder al entorno de 
-desarrollo de la aplicación en `http://w2w.aeropuerto/app_dev.php`. El 
-entorno de producción es accesible en `http://w2w.aeropuerto/`
+desarrollo de la aplicación en `http://w2w.plantilla_sf2/app_dev.php`. El 
+entorno de producción es accesible en `http://w2w.plantilla_sf2/`
 
 Si se produce algún error, es posible que el servidor web no tenga permiso de 
 escritura en los directordesymfonyios de la caché y de los logs. Ejecuta `chmod -R 777 
@@ -141,6 +140,5 @@ El proyecto esta siendo desarrollado por:
 ```
 
   * Jean Mendoza (@rivasjeancarlos)
-  * Jamenson Alvarez (@JamensonAlvarez)
 
 ```

@@ -65,10 +65,15 @@ jms_security_extra:
 fos_user:
     db_driver: orm # otros valores válidos son 'mongodb', 'couchdb'
     firewall_name: principal
-    user_class: Taller\AeronauticoBundle\Entity\Usuario
+    user_class: Empresa\PlantillaBundle\Entity\Usuario
     group:
-        group_class: Taller\AeronauticoBundle\Entity\Grupo
+        group_class: Empresa\PlantillaBundle\Entity\Grupo
 #    encoder: 
 #        algorithm:          sha512 
 #        encode_as_base64:   false 
 #        iterations:         1 
+
+knp_menu:
+    twig: true  # set to false to disable the Twig extension and the TwigRenderer
+    templating: false # if true, enables the helper for PHP templates
+    default_renderer: twig # The renderer to use, list is also available by default

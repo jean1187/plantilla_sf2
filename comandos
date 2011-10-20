@@ -1,0 +1,4 @@
+php app/console cache:clear && chmod  777 -Rf app/cache/
+rm -Rf app/cache/* && chmod  777 -Rf app/cache/
+php app/console assets:install web --symlink
+php app/console assetic:dump --env=prod --no-debug

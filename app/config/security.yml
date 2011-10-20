@@ -1,11 +1,4 @@
 security:      
-#    encoders:
-#        Symfony\Component\Security\Core\User\User:
-#            algorithm:  sha1
-#            iterations: 1
-#            encode_as_base64: true
-#        Taller\AeronauticoBundle\Entity\Usuario: sha512
-
     firewalls:
  #       login_firewall:
  #           pattern:    ^/login$
@@ -31,24 +24,7 @@ security:
          - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
          - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
          - { path: ^/, role: ROLE_USER }
-#         - { path: ^/, roles: ROLE_USER }      
-#         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-           
     providers:
         fos_userbundle:
             id: fos_user.user_manager
             
- #   encoders:
- #           Taller\AeronauticoBundle\Entity\Usuario: 
-  #            algorithm: sha512
-   #           encode-as-base64: true
-    #          iterations: 5
-                  #id: fos_user.user_manager       
-#        Taller\AeronauticoBundle\Entity\Usuario: sha512
-#        Taller\AeronauticoBundle\Entity\Usuario: plaintext
-#        Taller\AeronauticoBundle\Entity\Usuario:
-#            algorithm: sha512
-#            encode-as-base64: true
-#            iterations: 5
-
-#        id: fos_user.user_manager       

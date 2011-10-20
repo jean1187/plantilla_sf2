@@ -19,7 +19,9 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Taller\AeronauticoBundle\AeronauticoBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Empresa\PlantillaBundle\PlantillaBundle(),
+            new Configuration\GralBundle\ConfigurationGralBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
